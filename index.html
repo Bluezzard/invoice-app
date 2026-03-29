@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice System - Multi User</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal active">
+        <div class="modal-content">
+            <div class="logo">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h1>Invoice System</h1>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+            <div class="demo-users">
+                <h3>Demo Users:</h3>
+                <div class="user-demo">
+                    <strong>Admin:</strong> admin / 123456<br>
+                    <strong>Gudang:</strong> gudang / 123456<br>
+                    <strong>Sales:</strong> sales / 123456<br>
+                    <strong>Customer:</strong> customer / 123456<br>
+                    <strong>Finance:</strong> finance / 123456
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="mainApp" class="app-container hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h2 id="appTitle">Invoice System</h2>
+            </div>
+            <div class="header-right">
+                <span class="user-info" id="userInfo">
+                    <i class="fas fa-user"></i> <span id="currentUser"></span>
+                </span>
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <ul class="nav-menu">
+                <!-- Menu akan di-generate oleh JS -->
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="contentArea">
+                <!-- Content akan di-load disini -->
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
